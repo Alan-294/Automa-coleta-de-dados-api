@@ -9,7 +9,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-conexao = sqlite3.connect("rpa.db")
+conexao = sqlite3.connect("BancoPersonagens.db")
 cursor = conexao.cursor()
 
 cursor.execute('''
@@ -47,7 +47,7 @@ def extrair_personagem(id):
     species = dados['species']
     gender = dados['gender']
         
-    conexao = sqlite3.connect("rpa.db")
+    conexao = sqlite3.connect("BancoPersonagens.db")
     cursor = conexao.cursor()
     
     nomes.append(name)
